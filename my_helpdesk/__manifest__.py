@@ -3,20 +3,16 @@
 {
     'name': 'HelpDesk-curso',
     'version': '13.0.0.0.0',
-    'category': 'Customer Relationship Management',
     'summary': 'Módulo para gestionar problemas, garantías, etc...',
+    'category': 'Customer Relationship Management',
     'author': 'Amadeo Morán Guerrero',
     'maintainer': 'Amadeo Morán Guerrero',
-    'support': 'amadeo.moran@gmail.com',
-    'website': '',
-    'depends': ['base'],
-    'demo': [],
-    'data': [
+    'license':'AGPL-3',
+    'data':[
+        'security/helpdesk_security.xml',
+        'security/ir.model.access.csv',
+        'views/helpdesk_ticket_views.xml',
     ],
-    'license':"AGPL-3"
-    'application': True,
     'installable': True,
     'auto_install': False,
-    'images': [],
-    'qweb': [],
 }
