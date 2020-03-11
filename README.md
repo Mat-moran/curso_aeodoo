@@ -1,5 +1,8 @@
 # curso_aeodoo
 Curso aeodoo addons.
 
-Creación de un Helpdesk.
+
+<<<<<<< HEAD
+=======
+Creación de un HELPDESK
 
