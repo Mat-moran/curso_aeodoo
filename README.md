@@ -2,5 +2,4 @@
 Curso aeodoo addons.
 
 Creación de un Helpdesk.
-Creación de un HELPDESK
 
