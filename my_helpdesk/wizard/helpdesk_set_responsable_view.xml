@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_helpdesk_set_responsable_form" model="ir.ui.view">
+        <field name="name">view.helpdesk.set.responsable.form</field>
+        <field name="model">helpdesk.set.responsable</field>
+        <field name="arch" type="xml">
+            <form string="Set Responsable">
+                <p>Are you sure you want to set responable</p>
+                <footer>
+                    <button name="set_responsable" type="object" class="btn-primary" string="Confirm"/>
+                    <button class="btn-secondary" special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_helpdesk_set_responsable" model="ir.actions.act_window">
+        <field name="name">Set Responsable</field>
+        <field name="res_model">helpdesk.set.responsable</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_helpdesk_set_responsable_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

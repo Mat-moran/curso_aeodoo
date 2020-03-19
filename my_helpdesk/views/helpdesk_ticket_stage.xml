@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <menuitem id="helpdesk_ticket_stage" name="Tickets Stage" parent="my_helpdesk.helpdesk_ticket_main_menu" sequence="100"/>
+
+</odoo>

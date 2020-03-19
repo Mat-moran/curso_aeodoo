@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="views_res_users_helpdesk_form" model="ir.ui.view">
+        <field name="name">view.res.users.helpdesk.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"></field>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="helpdesk_code" />
+                <field name="ticket_ids" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -8,6 +8,53 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_hd_ticket" name="Tickets" action="helpdesk_ticket_action" sequence="100"/>
+    <record id="view_helpdesk_ticket_tree" model="ir.ui.view">
+        <field name="name">view.helpdesk.ticket.tree</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name"/>
+                <field name="description" optional="hide"/>
+                <field name="date_deadline"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_helpdesk_ticket_form" model="ir.ui.view">
+        <field name="name">view.helpdesk.ticket.form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Ticket">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="date_deadline"/>
+                            <field name="responsable_id"/>
+                            <button name="set_responsable" type="object" string="Asign to me"/>
+                            <button string="Assign to me" name="set_responsable" type="object"/>
+                            <button string="Assitn to me (Wizard)" type="action"
+                            name="%(action_helpdesk_set_responsable)d"/>
+                        </group>
+                    </group>
+
+                    <group string="Descripción">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                    <group string="Team">
+                        <field name="team_id" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="helpdesk_menu" name="Helpdesk" sequence="20"/>
+    <menuitem id="helpdesk_ticket_main_menu" name="Tickets" parent="my_helpdesk.helpdesk_menu" sequence="100"/>
+    <menuitem id="helpdesk_ticket_config_menu" name="Configuration" parent="my_helpdesk.helpdesk_ticket_main_menu" sequence="100"/>
+
+    <menuitem id="helpdesk_ticket_menu" name="Tickets" parent="helpdesk_ticket_main_menu" action="helpdesk_ticket_action" sequence="100"/>
 
 </odoo>
